@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Solve</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bd2b93a447.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="overflow-hidden">
+
+    <!-- navbar -->
+    <header class="bg-cyan-500 font-poppins">
+
+        <div class="container mx-auto flex items-center">
+
+            <div class="p-4 z-10">
+                <button id="hambuger">
+                    <span class="hambuger-line origin-top-left"></span>
+                    <span class="hambuger-line"></span>
+                    <span class="hambuger-line origin-bottom-left"></span>
+                </button>
+            </div>
+
+            <div class="w-full p-4">
+                <h1 class="text-slate-100 text-2xl font-bold font-poppins">Math Solve</h1>
+            </div>
+
+            <nav id="nav"
+                class="h-full p-4 absolute left-0 top-0 bg-cyan-500 -translate-x-full transition duration-300">
+
+                <ul class="mt-12">
+                    <li>
+                        <h2 class="text-slate-100 text-2xl font-bold font-poppins mb-4">Math Solve</h2>
+                    </li>
+                    <li id="bangunDatar" class="cursor-pointer flex hover:bg-cyan-600">
+                        <svg class="w-7 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470.06 447.99">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #06b6d4;
+                                        stroke: #f1f5f9;
+                                        stroke-linecap: round;
+                                        stroke-linejoin: round;
+                                        stroke-width: 20px;
+                                    }
+
+                                </style>
+                            </defs>
+                            <title>Asset 1</title>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="Layer_1-2" data-name="Layer 1">
+                                    <polygon class="cls-1" points="246.63 3.5 104.59 246.71 388.68 246.71 246.63 3.5" />
+                                    <circle class="cls-1" cx="129.4" cy="318.6" r="125.9" />
+                                    <rect class="cls-1" x="228.32" y="199.48" width="238.24" height="238.24" />
+                                </g>
+                            </g>
+                        </svg>
+                        <h3 class="text-slate-100 text-lg font-semibold ml-3">
+                            Bangun Datar <i class="fa-solid fa-caret-down cursor-pointer ml-1"></i>
+                        </h3>
+                    </li>
+                    <li>
+                        <ul id="menuBangunDatar" class="ml-4 transition duration-300 -translate-y-24 hidden">
+
+                            <li id="menu-persegi"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Persegi
+                            </li>
+
+                            <li id="menu-persegi-panjang"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Persegi Panjang
+                            </li>
+
+                            <li id="menu-belah-ketupat"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Belah Ketupat
+                            </li>
+
+                            <li id="menu-layang2"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Layang-Layang
+                            </li>
+
+                            <li id="menu-jajargenjang"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Jajargenjang
+                            </li>
+
+                            <li id="menu-trapesium"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Trapesium
+                            </li>
+
+                            <li id="menu-segitiga"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                <i class="fa-solid fa-triangle"></i>
+                                Segitiga
+                            </li>
+
+                            <li id="menu-lingkaran"
+                                class="text-slate-100 text-lg font-semibold cursor-pointer hover:bg-cyan-600">
+                                Lingkaran
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="bangunRuang" class="cursor-pointer hover:bg-cyan-600">
+                        <h3 class="text-slate-100 text-lg font-semibold">
+                            Bangun Ruang <i class="fa-solid fa-caret-down cursor-pointer ml-1"></i>
+                        </h3>
+                    </li>
+                    <li id="menu-romawi" class="cursor-pointer hover:bg-cyan-600">
+                        <h3 class="text-slate-100 text-lg font-semibold">
+                            Angka Romawi
+                        </h3>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+    <!-- navbar -->
+
+
+    <!-- Background -->
+    <div class="w-full h-full fixed -z-10">
+        <div class="box-content pb-[300px] absolute h-full w-full bg">
+
+        </div>
+    </div>
+    <!-- Bankground -->
+
+    <!-- Welcome -->
+    <section id="welcome" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Math Solve</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+                <h4 class="text-slate-100 mb-4 text-center">
+                    Math Solve adalah sebuah aplikasi yang dapat menghitung hasil perhitungan sederhana.
+                </h4>
+                <button id="mulai"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Mulai!</button>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome -->
+
+    <!-- Persegi -->
+    <div id="persegi" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Persegi</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-persegi" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="sisi" class="label-count">Sisi:</label>
+                    <input type="number" id="sisi" class="ml-2 input-count">
+                </div>
+                <button id="hitung-persegi"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <div id="demo-persegi" class="text-slate-100 mt-4 p-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Persegi -->
+
+    <!-- Persegi Panjang -->
+    <div id="persegi-panjang" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Persegi Panjang</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-persegi-panjang" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="sisi" class="label-count">Panjang:</label>
+                    <input type="number" id="panjang-pp" class="ml-2 input-count">
+                </div>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="sisi" class="label-count">Lebar:</label>
+                    <input type="number" id="lebar-pp" class="ml-6 input-count">
+                </div>
+
+                <button id="hitung-persegi-panjang"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+
+                <div id="demo-persegi-panjang" class="text-slate-100 mt-4 p-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Persegi Panjang -->
+
+    <!-- Segitiga -->
+    <div id="segitiga" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden -z-10 ">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Segitiga</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-segitiga" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div id="input-segitiga">
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="alas" class="label-count">Alas:</label>
+                        <input type="number" id="alas" class="ml-5 input-count">
+                    </div>
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="tinggi" class="label-count">Tinggi:</label>
+                        <input type="number" id="tinggi" class="ml-2 input-count">
+                    </div>
+                </div>
+
+                <button id="hitung-segitiga"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <div id="demo-segitiga" class="text-slate-100 mt-4 p-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Segitiga -->
+
+    <!-- Lingkaran -->
+    <div id="lingkaran" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Lingkaran</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-lingkaran" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <select id="diaJari" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="jari-jari" class="">jari-jari</option>
+                    <option value="diameter">diameter</option>
+                </select>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="jari" class="label-count" id="label-jari">Jari-jari:</label>
+                    <input type="number" id="jari" class="ml-2 input-count">
+                </div>
+
+                <button id="hitung-lingkaran"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <div id="demo-lingkaran" class="text-slate-100 mt-4 p-4"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Lingkaran -->
+
+    <!-- Jajargenjang -->
+    <div id="jajargenjang" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Jajargenjang</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-jajargenjang" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="alas-jajar" class="label-count" id="LA-jajar">Alas:</label>
+                    <input type="number" id="alas-jajar" class="ml-5 input-count">
+                </div>
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="tingg-jajar" class="label-count" id="LT-jajar">Tinggi:</label>
+                    <input type="number" id="tinggi-jajar" class="ml-2 input-count">
+                </div>
+
+                <button id="hitung-jajargenjang"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <div id="demo-jajargenjang" class="text-slate-100 mt-4 p-4"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Jajargenjang -->
+
+    <!-- trapesium -->
+    <div id="trapesium"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Trapesium</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-trapesium" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div id="input-trapesium">
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sejajar-1" class="label-count" id="LA-jajar">Sisi Sejajar-1:</label>
+                        <input type="number" id="sejajar-1" class="ml-2 input-count">
+                    </div>
+
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sejajar-2" class="label-count" id="LA-jajar">Sisi sejajar-2:</label>
+                        <input type="number" id="sejajar-2" class="ml-2 input-count">
+                    </div>
+
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="tinggi-trape" class="label-count" id="LT-jajar">Tinggi:</label>
+                        <input type="number" id="tinggi-trape" class="ml-2 input-count">
+                    </div>
+                </div>
+
+                <button id="hitung-trapesium"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <div id="demo-trapesium" class="text-slate-100 mt-4 p-4"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- trapesium -->
+
+    <!-- Romawi -->
+    <div id="romawi" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Angka Romawi</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full pt-10 p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <div class="flex justify-center items-center mb-4">
+                    <label for="sejajar-1" class="label-count" id="LA-romawi">Angka:</label>
+                    <input type="number" id="angka" class="ml-2 input-count">
+                </div>
+
+                <button id="hitung-romawi"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+                <p class="font-semibold text-slate-100 mt-4 text-lg">Angka Romawi<p></p>
+                    <div id="demo-romawi" class="text-slate-100 p-4"></div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Romawi -->
+
+    <!-- Belah Ketupat -->
+    <div id="belah-ketupat" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Belah Ketupat</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-belah-ketupat" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div id="input-belah-ketupat">
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sisi" class="label-count">Diagonal 1:</label>
+                        <input type="number" id="d1" class="ml-2 input-count">
+                    </div>
+
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sisi" class="label-count">Diagonal 2:</label>
+                        <input type="number" id="d2" class="ml-2 input-count">
+                    </div>
+                </div>
+
+                <button id="hitung-belah-ketupat"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+
+                <div id="demo-belah-ketupat" class="text-slate-100 mt-4 p-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Belah Ketupat -->
+
+    <!-- Layang-Layang -->
+    <div id="layang2" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 hidden">
+        <div
+            class="container mx-auto bg-cyan-500 w-96  lg:w-[30rem] h-full rounded-tl-[3rem] rounded-br-[3rem] shadow-xl">
+            <div class="w-full p-4 bg-cyan-600 rounded-tl-[3rem]">
+                <h3 class="text-slate-100 text-lg font-semibold text-center">Layang-Layang</h3>
+                <hr class="w-full border-b-2">
+            </div>
+
+            <div class="w-full p-4 flex flex-wrap flex-col justify-center items-center">
+
+                <select id="LK-layang2" class="outline-none mb-4 w-[7rem] bg-slate-200 p-1 rounded">
+                    <option value="luas" class="">Luas</option>
+                    <option value="keliling">Keliling</option>
+                </select>
+
+                <div id="input-layang2">
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sisi" class="label-count">Diagonal 1:</label>
+                        <input type="number" id="d1-ly" class="ml-2 input-count">
+                    </div>
+
+                    <div class="flex justify-center items-center mb-4">
+                        <label for="sisi" class="label-count">Diagonal 2:</label>
+                        <input type="number" id="d2-ly" class="ml-2 input-count">
+                    </div>
+                </div>
+
+                <button id="hitung-layang2"
+                    class="text-slate-100 bg-cyan-600 h-8 w-24 rounded shadow-md transition hover:bg-cyan-700 ">Hitung!</button>
+
+                <div id="demo-layang2" class="text-slate-100 mt-4 p-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Layang-Layang -->
+
+    <script src="js/script.js"></script>
+    <script src="js/muncul.js"></script>
+    <script src="js/hitung.js"></script>
+</body>
+
+</html>

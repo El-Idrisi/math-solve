@@ -1,0 +1,9 @@
+<div class="flex justify-center items-center mb-4">
+    <label for="sisi" class="label-count">Sisi 1:</label>
+    <input type="number" id="s1-ly" class="ml-2 input-count">
+</div>
+
+<div class="flex justify-center items-center mb-4">
+    <label for="sisi" class="label-count">Sisi 2:</label>
+    <input type="number" id="s2-ly" class="ml-2 input-count">
+</div>

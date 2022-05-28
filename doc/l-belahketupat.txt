@@ -1,0 +1,9 @@
+    <div class="flex justify-center items-center mb-4">
+        <label for="sisi" class="label-count">Diagonal 1:</label>
+        <input type="number" id="d1" class="ml-2 input-count">
+    </div>
+
+    <div class="flex justify-center items-center mb-4">
+        <label for="sisi" class="label-count">Diagonal 2:</label>
+        <input type="number" id="d2" class="ml-2 input-count">
+    </div>

@@ -1,0 +1,8 @@
+<div class="flex justify-center items-center mb-4">
+    <label for="alas" class="label-count">Alas:</label>
+    <input type="number" id="alas" class="ml-5 input-count">
+</div>
+<div class="flex justify-center items-center mb-4">
+    <label for="tinggi" class="label-count">Tinggi:</label>
+    <input type="number" id="tinggi" class="ml-2 input-count">
+</div>

@@ -1,0 +1,16 @@
+<div class="flex justify-center items-center mb-4">
+    <label for="Sisi-1-trape" class="label-count" id="LT-jajar">Sisi-1:</label>
+    <input type="number" id="sisi-1-trape" class="ml-2 input-count">
+</div>
+<div class="flex justify-center items-center mb-4">
+    <label for="Sisi-2-trape" class="label-count" id="LT-jajar">Sisi-2:</label>
+    <input type="number" id="sisi-2-trape" class="ml-2 input-count">
+</div>
+<div class="flex justify-center items-center mb-4">
+    <label for="Sisi-3-trape" class="label-count" id="LT-jajar">Sisi-3:</label>
+    <input type="number" id="sisi-3-trape" class="ml-2 input-count">
+</div>
+<div class="flex justify-center items-center mb-4">
+    <label for="Sisi-4-trape" class="label-count" id="LT-jajar">Sisi-4:</label>
+    <input type="number" id="sisi-4-trape" class="ml-2 input-count">
+</div>
